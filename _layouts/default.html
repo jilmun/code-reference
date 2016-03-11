@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    {% if page.title == "Home" %}
+      {{ site.tagline }}
+    {% else %}
+      {{ page.title }} &middot; {{ site.title }}
+    {% endif %}
+  </title>
+
+  <!-- CSS 
+  <link rel="stylesheet" href="{{ site.baseurl }}public/css/poole.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}public/css/syntax.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}public/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700%7CAbril+Fatface"> -->
+  
+  <style>
+    {% include css/basic.scss %}
+  </style>
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}images/Hashtag Grid-48.png">
+  <link rel="shortcut icon" href="{{ site.baseurl }}images/favicon.ico">
+
+</head>
+
+<body>
+
+    <!--{% include navbar.html %}-->
+
+  <div class="content container">
+    <main>
+      {{ content }}
+    </main>   
+  </div>
+
+</body>
+</html>
