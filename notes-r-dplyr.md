@@ -1,9 +1,8 @@
 ---
 layout: page
-title: Git Basics
+title: dplyr
+tags: R
 ---
-
-{% include social.html %}
 
 # Reference for 'dplyr' package
 The following notes are based on Kevin Markham's two part tutorial on dplyr.  

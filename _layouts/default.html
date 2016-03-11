@@ -12,26 +12,23 @@
       {{ page.title }} &middot; {{ site.title }}
     {% endif %}
   </title>
-
-  <!-- CSS 
-  <link rel="stylesheet" href="{{ site.baseurl }}public/css/poole.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}public/css/syntax.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}public/css/hyde.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700%7CAbril+Fatface"> -->
   
   <style>
     {% include css/basic.scss %}
+    {% include css/styles.css %}
   </style>
+  
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,300,500,700|Ubuntu:400,300,300italic,500,700|Montserrat' rel='stylesheet' type='text/css'>
 
-  <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}images/Hashtag Grid-48.png">
-  <link rel="shortcut icon" href="{{ site.baseurl }}images/favicon.ico">
+  <!-- Favicon from Personal Site -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}public/Hashtag Grid-48.png">
+  <link rel="shortcut icon" href="{{ site.baseurl }}public/favicon.ico">
 
 </head>
 
 <body>
 
-    <!--{% include navbar.html %}-->
+  {% include navbar.html %}  <!-- currently empty -->
 
   <div class="content container">
     <main>

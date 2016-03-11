@@ -3,8 +3,6 @@ layout: page
 title: Git Basics
 ---
 
-{% include social.html %}
-
 # Git Reference
 
 ### Rename File or Folder

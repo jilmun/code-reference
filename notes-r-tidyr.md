@@ -1,9 +1,8 @@
 ---
 layout: page
-title: Git Basics
+title: tidyr
+tags: R
 ---
-
-{% include social.html %}
 
 # Reference for 'tidyr' package
 November 2, 2015  
