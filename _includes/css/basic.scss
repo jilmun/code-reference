@@ -10,8 +10,11 @@
 
 html,
 body {
-  margin: 15;
-  padding: 15;
+  max-width: 62.5rem;
+  padding-left:  1rem;
+  padding-right: 1rem;
+  margin-left:  auto;
+  margin-right: auto;
 }
 
 html {
@@ -30,6 +33,14 @@ body {
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
+}
+
+.navbar {
+  background-color: #F8F8F8;
+}
+.nav-item.active {
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 /* No `:visited` state is required by default (browsers will use `a`) */
@@ -151,32 +162,33 @@ pre code {
 .social {
   list-style: none;
   margin: 30px 0;
-  padding: 0
+  padding: 0;
+  float: right;
 }
 
 .social li {
   display: inline-block;
-  margin: 0 10px
+  margin: 0 10px;
 }
 
 .social li:first-child {
-  margin-left: 0
+  margin-left: 0;
 }
 
 .social li a {
   display: inline-block;
   border: 0;
   padding: 0;
-  background: none
+  background: none;
 }
 
 .social li a:focus {
-  outline: none
+  outline: none;
 }
 
 .social li svg {
   height: 30px;
-  width: 30px
+  width: 30px;
 }
 
 /* ----- code highlighting ----- */

@@ -1,9 +1,50 @@
 ---
 layout: page
-title: Git Basics
+title: git
 ---
 
 # Git Reference
+
+## Basics
+
+**Configure Git**
+
+* `git config --global user.name "Your Name"` - set user name
+* `git config --global user.email "user@domain.com"` - set email
+* `cd /path/to/repository` - set directory path
+* `git config --global core.editor /path/to/editor` - set default editor
+* `git config --global color.ui auto` - turn on colors when possible
+
+**Create Repository for New Project**
+
+* `mkdir some-repository`
+* `cd some-repository`
+* `git init`
+
+**Create Repository for Existing Project**
+
+* `cd /path/to/some/directory`
+* `git init`
+
+**Clone Repository**
+
+* `git clone git://github.com/username/repo.git`
+* `git clone git://github.com/username/repo.git cloned-repo` - clone to specific path
+* `git clone --depth 50 some-repository` - shallow clone with last 50 commits
+
+**Stage Files**
+
+* `git add .`
+
+**Commit Changes**
+* `git commit -m "initial commit"` 
+
+**Other Commands**
+
+
+
+
+## Miscellaneous
 
 ### Rename File or Folder
 
