@@ -5,6 +5,8 @@ title: git
 
 # Git Reference
 
+-----
+
 ## Basics
 
 
@@ -44,12 +46,8 @@ title: git
 * `git add -A` or `git add --all` - add all files not explicitly ignored
 * `git add -u` or `git add --update` - add changed tracked files, does not add new files
 * `git add myfile.*` - add all files beginning with "myfile."
-* `git add -p` or `git add --patch` - specifically choose which changes to commit, select 'y' or 
-
-'n' for each change
-* git does not track empty directories (as of v1.7) but adding an empty dot file will force 
-
-tracking (i.e. ".include_in_git")
+* `git add -p` or `git add --patch` - specifically choose which changes to commit, select 'y' or 'n' for each change
+* git does not track empty directories (as of v1.7) but adding an empty dot file will force tracking (i.e. ".include_in_git")
 
 
 **Check Status and Commit Changes**
@@ -61,9 +59,7 @@ tracking (i.e. ".include_in_git")
 **Ignore Files**
 
 * add files to .gitignore: i.e. `cache`, `*.RData`
-* `git config --global core.excludesfile ~/.gitignore` - set up global excludes file in 
-
-.gitignore in home directory
+* `git config --global core.excludesfile ~/.gitignore` - set up global excludes file in .gitignore in home directory
 
 
 **Undo Changes**
@@ -88,7 +84,7 @@ tracking (i.e. ".include_in_git")
 * `git rm -r -- outdated/` - remove directory
 
 
-
+-----
 
 ## Miscellaneous
 
@@ -108,16 +104,12 @@ Force push
 
 **In a directory**
 
-This command will cause git to untrack your directory and all files under it without actually 
-
-deleting them:
+This command will cause git to untrack your directory and all files under it without actually deleting them:
 
 `git rm -r --cached <your directory>`
 
 * The `-r` option causes the removal of all files under your directory.
-* The `--cached` option causes the files to only be removed from git's index, not your working 
-
-copy. By default git rm <file> would delete <file>.
+* The `--cached` option causes the files to only be removed from git's index, not your working copy. By default git rm <file> would delete <file>.
 
 **For a specific file**
 
@@ -136,21 +128,12 @@ After the merge, it's safe to delete the branch:
 
 `git branch -d branch1`
 
-Additionally, git will warn you (and refuse to delete the branch) if it thinks you didn't fully 
+Additionally, git will warn you (and refuse to delete the branch) if it thinks you didn't fully merge it yet. If you forcefully delete a branch (with git branch -D) which is not completely merged yet, you have to do some tricks to get the unmerged commits back though (see below).
 
-merge it yet. If you forcefully delete a branch (with git branch -D) which is not completely 
-
-merged yet, you have to do some tricks to get the unmerged commits back though (see below).
-
-There are some reasons to keep a branch around though. For example, if it's a feature branch, you 
-
-may want to be able to do bugfixes on that feature still inside that branch.
+There are some reasons to keep a branch around though. For example, if it's a feature branch, you may want to be able to do bugfixes on that feature still inside that branch.
 
 If you also want to delete the branch on a remote host, you can do:
 
 `git push origin :branch1`
 
-This will forcefully delete the branch on the remote (this will not affect already checked-out 
-
-repositiories though and won't prevent anyone with push access to re-push/create it).
-
+This will forcefully delete the branch on the remote (this will not affect already checked-out repositiories though and won't prevent anyone with push access to re-push/create it).
