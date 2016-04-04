@@ -77,6 +77,17 @@ title: git
 * `git push remotename branchname` - push changes to remote repository
 
 
+**Create Branches**
+
+* `git branch somebranchname optionalcommitiDorTag` - create branch
+* `git checkout somebranchname` - switch to branch
+* `git checkout -b somebranchname` - create and switch to branch
+* `git branch -a` - view all branches
+* `git branch --merged` - view merged branches
+* `git branch --no-merged` - view unmerged branches
+* `git branch --contains somecommitID` - view branches with some commitID
+
+
 **Other Commands**
 
 * `git mv README.md README.txt` or `git mv README.md wiki/` - rename or move README file
