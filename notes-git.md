@@ -79,13 +79,60 @@ title: git
 
 **Create Branches**
 
-* `git branch somebranchname optionalcommitiDorTag` - create branch
+* `git branch somebranchname optionalcommitIDorTag` - create branch
 * `git checkout somebranchname` - switch to branch
 * `git checkout -b somebranchname` - create and switch to branch
+* `git branch --track newbranchname` - default tracking for remote branches
+* `git branch --no-track new branchname` - turn tracking off
+
+
+**View Branches**
+
+* `git branch` - view local branches
+* `git branch -r` - view remote branches
 * `git branch -a` - view all branches
-* `git branch --merged` - view merged branches
+* `git branch --merged` - view merged branches in current branch
 * `git branch --no-merged` - view unmerged branches
 * `git branch --contains somecommitID` - view branches with some commitID
+
+
+**Merge Branches**
+
+* `git checkout master`
+* `git merge developmentbranch` - merge new branch into master
+* `git merge --no-commit developmentbranch` - merge without commit
+* `git merge --no-ff developmentbranch` - force merge commit, no fast forward
+* `git merge -m "custom commit message" developmentbranch` - merge with custom commit message
+* `git rebase master` - update development branch with new master commits
+* `git rebase commitIDorTag` - update parent for development branch
+* `git reset --hard ORIG_HEAD` - undo a rebase
+* `git branch -d mergedbranch` - delete unused merged branch
+* `git branch -D unmergedbranch` - delete experimental unmerged branch
+
+
+**Tag Commits**
+
+* `git tag` - list all tags, remote and local treated the same
+* `git tag v1.0` - create tag on latest commit in current branch
+
+
+**View Log**
+
+* `git log` - see reverse chronological list of commits
+* `git log --oneline` - see shortened commit ID and messages in one line
+* `git log -5` - see last 5 commits
+* `git log -1 -p HEAD` - see changes in most recent commit
+* `git log -- filename` - see log for single file
+* `git log --after="7 days"` - see commits in last week
+* `git log --grep="some regular expression"` - view log entries with some string
+
+
+**View Changes**
+
+* `git diff` - diff current working tree and staging area
+* `git diff --stages` - diff staged changes and repository
+* `git diff HEAD` - diff working tree and repository
+* `git diff firstcommitIDorTag secondcommitIDorTag` - diff two commits
 
 
 **Other Commands**
@@ -93,6 +140,15 @@ title: git
 * `git mv README.md README.txt` or `git mv README.md wiki/` - rename or move README file
 * `git rm -- outdated.txt` - remove file
 * `git rm -r -- outdated/` - remove directory
+* `git remote add branchname webURL` - add new remote repository
+* `git remote rm branchname` - remove remote repository
+* `git pull origin remotebranch:localbranch` - pull remote branch into local branch
+* `git push origin remotebranch:localbranch` - push local branch into remote branch
+* `git push origin :beta` - delete remote branch called beta (replaces with empty branch)
+* `git revert --no-edit commitID` - revert commit with default revert commit message
+* `git reset --soft HEAD^` - reset last commit and stage changes
+* `git gc` - run garbage collection by default removes orphans older than 2 weeks
+* `git gc --prune="1 week"` - remove loose objects older than 1 week
 
 
 -----
