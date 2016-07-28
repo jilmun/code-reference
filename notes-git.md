@@ -155,6 +155,17 @@ title: git
 
 ## Miscellaneous
 
+### Working with Forks
+
+Reset origin from original upstream repository to personal fork
+
+`git remote set-url origin https://github.com/username/myrepo.git`
+
+Add original upstream repository as another remote and merge upstream commits into fork
+
+* `git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git`
+* `git pull https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git BRANCH_NAME`
+* `git push origin master`
 
 ### Squash Commits
 
