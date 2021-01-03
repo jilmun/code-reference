@@ -11,7 +11,7 @@ permalink:        pretty
 title:            "( . .)φ__"
 tagline:          "Coding Notes"
 description:      "Reference for Git, R, HTML, CSS and JS"
-url:              http://yahwes.github.io/code-reference
+url:              http://jilmun.github.io/code-reference
 baseurl:          /
 paginate:         5
 
@@ -19,7 +19,7 @@ author:
   name:           'Janet Wesner'
   url:            https://twitter.com/lolatu2
   email:          janet.wesner@outlook.com
-  github:         https://github.com/yahwes
+  github:         https://github.com/jilmun
 
 # Assets
 sass:
@@ -28,7 +28,7 @@ sass:
 # Custom vars
 version:          0.1
 github:
-  repo:           https://github.com/yahwes/code-reference
+  repo:           https://github.com/jilmun/code-reference
 
 # Gems
 gems:
